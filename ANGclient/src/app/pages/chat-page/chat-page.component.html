@@ -1,0 +1,17 @@
+<h1>Liste des amis</h1>
+<ul *ngIf="usersArray">
+  <li *ngFor="let user of usersArray.users">
+    <button (click)="createConversation( user._id )">{{ user.name }}</button>
+  </li>
+</ul>
+
+<h1>Liste des Conversations</h1>
+
+<ul *ngIf="conversationsArray">
+  <li *ngFor="let conversation of conversationsArray.conversations">
+    <a [routerLink]="['/conversation',  conversation._id]">{{ conversation._id }}</a>
+  </li>
+</ul>
+<ul *ngIf="conversationsArray == undefined">
+  <p>No conversations yet</p>
+</ul>

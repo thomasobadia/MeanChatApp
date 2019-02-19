@@ -1,0 +1,29 @@
+
+
+<form (submit)="createMessage() " action="">
+
+  <!-- Data binding VUE <=> CTRL : [(...)] -->
+    <input
+    [(ngModel)]="messageFormData"
+     type="text"
+     name ="content"
+    >
+
+    <button type="submit">Send</button>
+  </form>
+
+
+  <div *ngIf="messagesArray">
+
+    <div *ngFor="let message of messagesArray.messages">
+      <div style="text-align: left" *ngIf="message.from !== this.myId" >
+          <p>{{message.date }}</p>
+          <p>{{message.content }}</p>
+      </div>
+      <div style="text-align: right" *ngIf="message.from == this.myId" >
+          <p>{{message.date }}</p>
+          <p>{{message.content }}</p>
+      </div>
+
+    </div>
+  </div>

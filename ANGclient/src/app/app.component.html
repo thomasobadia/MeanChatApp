@@ -1,0 +1,15 @@
+<header>
+  <nav>
+    <a [routerLink]="'/'">Home</a>
+    <a [routerLink]="'/login'">Login</a>
+    <a [routerLink]="'/register'">Register</a>
+    <a [routerLink]="'/chat'">Chat</a>
+  </nav>
+  <a (click)="disconnect()">Disconnect</a>
+
+</header>
+
+
+
+<router-outlet></router-outlet>
+

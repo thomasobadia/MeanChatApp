@@ -1,0 +1,23 @@
+<!-- Data binding VUE => CTRL : (...) -->
+
+<form (submit)="formSubmit() " action="">
+
+  <!-- Data binding VUE <=> CTRL : [(...)] -->
+    <input
+    [(ngModel)]="formData.name"
+     type="text"
+     name ="name"
+    >
+    <input
+    [(ngModel)]="formData.email"
+     type="text"
+     name ="email"
+    >
+    <input
+    [(ngModel)]="formData.password"
+     type="text"
+     name ="password"
+    >
+
+    <button type="submit">Register</button>
+  </form>

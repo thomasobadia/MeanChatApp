@@ -1,0 +1,22 @@
+
+
+<h1 [textContent]="myTitle"> </h1>
+
+
+
+<form (submit)="loginUser()" action="">
+
+  <input
+  [(ngModel)]="loginData.email"
+   type="text"
+   name ="email"
+  >
+  <input
+  [(ngModel)]="loginData.password"
+   type="text"
+   name ="password"
+  >
+
+  <button type="submit">Login</button>
+</form>
+
