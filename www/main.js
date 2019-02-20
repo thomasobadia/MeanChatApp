@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n  <nav>\n    <a [routerLink]=\"'/'\">Home</a>\n    <a [routerLink]=\"'/login'\">Login</a>\n    <a [routerLink]=\"'/register'\">Register</a>\n    <a [routerLink]=\"'/chat'\">Chat</a>\n  </nav>\n  <a (click)=\"disconnect()\">Disconnect</a>\n\n</header>\n\n\n\n<router-outlet></router-outlet>\n\n"
+module.exports = "\n\n\n\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -68,12 +68,6 @@ var AppComponent = /** @class */ (function () {
             password: undefined
         };
     }
-    AppComponent.prototype.disconnect = function () {
-        console.log('hello');
-        this.authService.disconnect();
-        document.cookie = 'berners=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-        this.router.navigate(['/']);
-    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
@@ -110,14 +104,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _app_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.router */ "./src/app/app.router.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _partials_test_test_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./partials/test/test.component */ "./src/app/partials/test/test.component.ts");
-/* harmony import */ var _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/home-page/home-page.component */ "./src/app/pages/home-page/home-page.component.ts");
-/* harmony import */ var _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/login-page/login-page.component */ "./src/app/pages/login-page/login-page.component.ts");
-/* harmony import */ var _pages_register_page_register_page_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/register-page/register-page.component */ "./src/app/pages/register-page/register-page.component.ts");
-/* harmony import */ var _pages_chat_page_chat_page_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/chat-page/chat-page.component */ "./src/app/pages/chat-page/chat-page.component.ts");
-/* harmony import */ var _pages_conversation_page_conversation_page_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/conversation-page/conversation-page.component */ "./src/app/pages/conversation-page/conversation-page.component.ts");
-
-
+/* harmony import */ var _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/login-page/login-page.component */ "./src/app/pages/login-page/login-page.component.ts");
+/* harmony import */ var _pages_register_page_register_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/register-page/register-page.component */ "./src/app/pages/register-page/register-page.component.ts");
+/* harmony import */ var _pages_chat_page_chat_page_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/chat-page/chat-page.component */ "./src/app/pages/chat-page/chat-page.component.ts");
+/* harmony import */ var _pages_conversation_page_conversation_page_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/conversation-page/conversation-page.component */ "./src/app/pages/conversation-page/conversation-page.component.ts");
 
 
 
@@ -136,12 +126,10 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
-                _partials_test_test_component__WEBPACK_IMPORTED_MODULE_7__["TestComponent"],
-                _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_8__["HomePageComponent"],
-                _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_9__["LoginPageComponent"],
-                _pages_register_page_register_page_component__WEBPACK_IMPORTED_MODULE_10__["RegisterPageComponent"],
-                _pages_chat_page_chat_page_component__WEBPACK_IMPORTED_MODULE_11__["ChatPageComponent"],
-                _pages_conversation_page_conversation_page_component__WEBPACK_IMPORTED_MODULE_12__["ConversationPageComponent"]
+                _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_7__["LoginPageComponent"],
+                _pages_register_page_register_page_component__WEBPACK_IMPORTED_MODULE_8__["RegisterPageComponent"],
+                _pages_chat_page_chat_page_component__WEBPACK_IMPORTED_MODULE_9__["ChatPageComponent"],
+                _pages_conversation_page_conversation_page_component__WEBPACK_IMPORTED_MODULE_10__["ConversationPageComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -171,12 +159,10 @@ var AppModule = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRouter", function() { return AppRouter; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/home-page/home-page.component */ "./src/app/pages/home-page/home-page.component.ts");
-/* harmony import */ var _pages_register_page_register_page_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/register-page/register-page.component */ "./src/app/pages/register-page/register-page.component.ts");
-/* harmony import */ var _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/login-page/login-page.component */ "./src/app/pages/login-page/login-page.component.ts");
-/* harmony import */ var _pages_chat_page_chat_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/chat-page/chat-page.component */ "./src/app/pages/chat-page/chat-page.component.ts");
-/* harmony import */ var _pages_conversation_page_conversation_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/conversation-page/conversation-page.component */ "./src/app/pages/conversation-page/conversation-page.component.ts");
-
+/* harmony import */ var _pages_register_page_register_page_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/register-page/register-page.component */ "./src/app/pages/register-page/register-page.component.ts");
+/* harmony import */ var _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/login-page/login-page.component */ "./src/app/pages/login-page/login-page.component.ts");
+/* harmony import */ var _pages_chat_page_chat_page_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/chat-page/chat-page.component */ "./src/app/pages/chat-page/chat-page.component.ts");
+/* harmony import */ var _pages_conversation_page_conversation_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/conversation-page/conversation-page.component */ "./src/app/pages/conversation-page/conversation-page.component.ts");
 
 
 
@@ -189,23 +175,19 @@ Definition
 var routes = [
     {
         path: '',
-        component: _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_1__["HomePageComponent"]
+        component: _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_2__["LoginPageComponent"]
     },
     {
         path: 'register',
-        component: _pages_register_page_register_page_component__WEBPACK_IMPORTED_MODULE_2__["RegisterPageComponent"]
-    },
-    {
-        path: 'login',
-        component: _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_3__["LoginPageComponent"]
+        component: _pages_register_page_register_page_component__WEBPACK_IMPORTED_MODULE_1__["RegisterPageComponent"]
     },
     {
         path: 'chat',
-        component: _pages_chat_page_chat_page_component__WEBPACK_IMPORTED_MODULE_4__["ChatPageComponent"]
+        component: _pages_chat_page_chat_page_component__WEBPACK_IMPORTED_MODULE_3__["ChatPageComponent"]
     },
     {
         path: 'conversation/:id',
-        component: _pages_conversation_page_conversation_page_component__WEBPACK_IMPORTED_MODULE_5__["ConversationPageComponent"]
+        component: _pages_conversation_page_conversation_page_component__WEBPACK_IMPORTED_MODULE_4__["ConversationPageComponent"]
     }
 ];
 //
@@ -235,7 +217,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Liste des amis</h1>\n<ul *ngIf=\"usersArray\">\n  <li *ngFor=\"let user of usersArray.users\">\n    <button (click)=\"createConversation( user._id )\">{{ user.name }}</button>\n  </li>\n</ul>\n\n<h1>Liste des Conversations</h1>\n\n<ul *ngIf=\"conversationsArray\">\n  <li *ngFor=\"let conversation of conversationsArray.conversations\">\n    <a [routerLink]=\"['/conversation',  conversation._id]\">{{ conversation._id }}</a>\n  </li>\n</ul>\n<ul *ngIf=\"conversationsArray == undefined\">\n  <p>No conversations yet</p>\n</ul>\n"
+module.exports = "\n<button (click)=\"disconnect()\"> Disconnect</button>\n\n<h1>Liste des utilisateurs</h1>\n<ul *ngIf=\"usersArray\">\n  <li *ngFor=\"let user of usersArray.users\">\n    <button (click)=\"createConversation( user._id )\">{{ user.name }}</button>\n  </li>\n</ul>\n\n<h1>Liste des Conversations</h1>\n\n<ul *ngIf=\"conversationsArray\">\n  <li *ngFor=\"let conversation of conversationsArray.conversations\">\n    <a [routerLink]=\"['/conversation',  conversation._id]\">{{ conversation.name }}</a>\n  </li>\n</ul>\n<ul *ngIf=\"conversationsArray == undefined\">\n  <p>No conversations yet</p>\n</ul>\n"
 
 /***/ }),
 
@@ -286,6 +268,12 @@ var ChatPageComponent = /** @class */ (function () {
         })
             .catch(function (apiResponse) { return console.log(apiResponse); });
     };
+    ChatPageComponent.prototype.disconnect = function () {
+        console.log('hello');
+        this.authService.disconnect();
+        document.cookie = 'berners=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        this.router.navigate(['/']);
+    };
     ChatPageComponent.prototype.showUsers = function () {
         var _this = this;
         this.userService.getUsers()
@@ -304,6 +292,7 @@ var ChatPageComponent = /** @class */ (function () {
             console.log(_this.conversationsArray);
             if (apiResponse.msg == "Conv created: ok") {
                 _this.conversationsArray.conversations.push(apiResponse.data);
+                _this.showUsernameFromId(_this.conversationsArray.conversations[_this.conversationsArray.conversations.length - 1]._id, _this.userId, _this.conversationsArray.conversations.length - 1);
             }
         })
             .catch(function (apiResponse) { return console.log(apiResponse); });
@@ -316,20 +305,25 @@ var ChatPageComponent = /** @class */ (function () {
         this.conversationService.getConversations({ id: id })
             .then(function (apiResponse) {
             _this.conversationsArray = apiResponse;
+            for (var i = 0; i < apiResponse.conversations.length; i++) {
+                _this.showUsernameFromId(apiResponse.conversations[i]._id, _this.userId, i);
+            }
             console.log(_this.conversationsArray);
         })
             .catch(function (apiResponse) { return console.log(apiResponse); });
     };
-    ChatPageComponent.prototype.showUsernameFromId = function (id, myId) {
+    ChatPageComponent.prototype.showUsernameFromId = function (id, myId, index) {
         // show users from conv
         var _this = this;
         this.userService.getUsernamefromId({ id: id })
             .then(function (apiResponse) {
+            console.log(apiResponse);
             if (apiResponse.data.user1 == myId) {
                 console.log(_this.usersArray.users.find((function (x) { return x._id === apiResponse.data.user2; })).name);
+                _this.conversationsArray.conversations[index].name = _this.usersArray.users.find((function (x) { return x._id === apiResponse.data.user2; })).name;
             }
             else {
-                console.log('ton pote cest' + _this.showUserFromId(apiResponse.data.user1));
+                _this.conversationsArray.conversations[index].name = _this.usersArray.users.find((function (x) { return x._id === apiResponse.data.user1; })).name;
             }
         })
             .catch(function (apiResponse) { return console.log(apiResponse); });
@@ -385,7 +379,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<form (submit)=\"createMessage() \" action=\"\">\n\n  <!-- Data binding VUE <=> CTRL : [(...)] -->\n    <input\n    [(ngModel)]=\"messageFormData\"\n     type=\"text\"\n     name =\"content\"\n    >\n\n    <button type=\"submit\">Send</button>\n  </form>\n\n\n  <div *ngIf=\"messagesArray\">\n\n    <div *ngFor=\"let message of messagesArray.messages\">\n      <div style=\"text-align: left\" *ngIf=\"message.from !== this.myId\" >\n          <p>{{message.date }}</p>\n          <p>{{message.content }}</p>\n      </div>\n      <div style=\"text-align: right\" *ngIf=\"message.from == this.myId\" >\n          <p>{{message.date }}</p>\n          <p>{{message.content }}</p>\n      </div>\n\n    </div>\n  </div>\n"
+module.exports = "<a [routerLink]=\"['/chat']\" >Back</a>\n\n\n  <div *ngIf=\"messagesArray\">\n\n    <div *ngFor=\"let message of messagesArray.messages\">\n      <div style=\"text-align: left\" *ngIf=\"message.from !== this.myId\" >\n          <p>{{message.date }}</p>\n          <p>{{message.content }}</p>\n      </div>\n      <div style=\"text-align: right\" *ngIf=\"message.from == this.myId\" >\n          <p>{{message.date }}</p>\n          <p>{{message.content }}</p>\n      </div>\n\n    </div>\n  </div>\n\n\n<form (submit)=\"createMessage() \" action=\"\">\n\n  <!-- Data binding VUE <=> CTRL : [(...)] -->\n    <input\n    [(ngModel)]=\"messageFormData\"\n     type=\"text\"\n     name =\"content\"\n    >\n\n    <button type=\"submit\">Send</button>\n  </form>\n"
 
 /***/ }),
 
@@ -525,82 +519,6 @@ var ConversationPageComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/pages/home-page/home-page.component.css":
-/*!*********************************************************!*\
-  !*** ./src/app/pages/home-page/home-page.component.css ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2hvbWUtcGFnZS9ob21lLXBhZ2UuY29tcG9uZW50LmNzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/pages/home-page/home-page.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/pages/home-page/home-page.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n\n<p>\n  home-page works!\n</p>\n"
-
-/***/ }),
-
-/***/ "./src/app/pages/home-page/home-page.component.ts":
-/*!********************************************************!*\
-  !*** ./src/app/pages/home-page/home-page.component.ts ***!
-  \********************************************************/
-/*! exports provided: HomePageComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageComponent", function() { return HomePageComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_auth_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/auth/auth.service */ "./src/app/services/auth/auth.service.ts");
-
-
-
-var HomePageComponent = /** @class */ (function () {
-    function HomePageComponent(authService) {
-        this.authService = authService;
-        this.isLoggedIn = false;
-    }
-    HomePageComponent.prototype.authUser = function () {
-        var _this = this;
-        this.authService.auth()
-            .then(function (apiResponse) {
-            console.log(apiResponse);
-            if (apiResponse.msg == 'user auth') {
-                _this.isLoggedIn = true;
-            }
-            else {
-                _this.isLoggedIn = false;
-            }
-        })
-            .catch(function (apiResponse) { return console.log(apiResponse); });
-    };
-    HomePageComponent.prototype.ngOnInit = function () {
-        console.log(this.isLoggedIn);
-    };
-    HomePageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-home-page',
-            template: __webpack_require__(/*! ./home-page.component.html */ "./src/app/pages/home-page/home-page.component.html"),
-            providers: [_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]],
-            styles: [__webpack_require__(/*! ./home-page.component.css */ "./src/app/pages/home-page/home-page.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]])
-    ], HomePageComponent);
-    return HomePageComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/pages/login-page/login-page.component.html":
 /*!************************************************************!*\
   !*** ./src/app/pages/login-page/login-page.component.html ***!
@@ -608,7 +526,7 @@ var HomePageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<h1 [textContent]=\"myTitle\"> </h1>\n\n\n\n<form (submit)=\"loginUser()\" action=\"\">\n\n  <input\n  [(ngModel)]=\"loginData.email\"\n   type=\"text\"\n   name =\"email\"\n  >\n  <input\n  [(ngModel)]=\"loginData.password\"\n   type=\"text\"\n   name =\"password\"\n  >\n\n  <button type=\"submit\">Login</button>\n</form>\n\n"
+module.exports = "\n<h1 [textContent]=\"myTitle\"> </h1>\n\n\n\n<form (submit)=\"loginUser()\" action=\"\">\n\n  <input\n  [(ngModel)]=\"loginData.email\"\n   type=\"text\"\n   name =\"email\"\n  >\n  <input\n  [(ngModel)]=\"loginData.password\"\n   type=\"text\"\n   name =\"password\"\n  >\n\n  <button type=\"submit\">Login</button>\n</form>\n\n<p>You can also  <a [routerLink]=\"'/register'\">Register</a></p>\n\n"
 
 /***/ }),
 
@@ -740,63 +658,6 @@ var RegisterPageComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], RegisterPageComponent);
     return RegisterPageComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/partials/test/test.component.css":
-/*!**************************************************!*\
-  !*** ./src/app/partials/test/test.component.css ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhcnRpYWxzL3Rlc3QvdGVzdC5jb21wb25lbnQuY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/partials/test/test.component.html":
-/*!***************************************************!*\
-  !*** ./src/app/partials/test/test.component.html ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  test works!\n</p>\n"
-
-/***/ }),
-
-/***/ "./src/app/partials/test/test.component.ts":
-/*!*************************************************!*\
-  !*** ./src/app/partials/test/test.component.ts ***!
-  \*************************************************/
-/*! exports provided: TestComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestComponent", function() { return TestComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var TestComponent = /** @class */ (function () {
-    function TestComponent() {
-    }
-    // Hooks
-    TestComponent.prototype.ngOnInit = function () {
-    };
-    TestComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-test',
-            template: __webpack_require__(/*! ./test.component.html */ "./src/app/partials/test/test.component.html"),
-            styles: [__webpack_require__(/*! ./test.component.css */ "./src/app/partials/test/test.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], TestComponent);
-    return TestComponent;
 }());
 
 
@@ -1118,7 +979,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\thoma\Desktop\cours\cours_H2\DEV\MEAN_CHAT\ANGclient\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\thoma\Documents\GitHub\MeanChatApp\ANGclient\src\main.ts */"./src/main.ts");
 
 
 /***/ }),

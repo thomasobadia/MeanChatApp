@@ -1,4 +1,7 @@
-<h1>Liste des amis</h1>
+
+<button (click)="disconnect()"> Disconnect</button>
+
+<h1>Liste des utilisateurs</h1>
 <ul *ngIf="usersArray">
   <li *ngFor="let user of usersArray.users">
     <button (click)="createConversation( user._id )">{{ user.name }}</button>
@@ -9,7 +12,7 @@
 
 <ul *ngIf="conversationsArray">
   <li *ngFor="let conversation of conversationsArray.conversations">
-    <a [routerLink]="['/conversation',  conversation._id]">{{ conversation._id }}</a>
+    <a [routerLink]="['/conversation',  conversation._id]">{{ conversation.name }}</a>
   </li>
 </ul>
 <ul *ngIf="conversationsArray == undefined">

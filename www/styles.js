@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\thoma\Desktop\cours\cours_H2\DEV\MEAN_CHAT\ANGclient\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\thoma\Documents\GitHub\MeanChatApp\ANGclient\src\styles.css */"./src/styles.css");
 
 
 /***/ })

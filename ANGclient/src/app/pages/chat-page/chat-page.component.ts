@@ -47,6 +47,14 @@ export class ChatPageComponent implements OnInit {
     .catch( apiResponse => console.log(apiResponse) )
   }
 
+  public disconnect(): void {
+    console.log('hello')
+
+    this.authService.disconnect()
+    document.cookie = 'berners=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    this.router.navigate(['/'])
+  }
+
   public showUsers( ): void {
     this.userService.getUsers()
     .then( (apiResponse) => {
@@ -65,6 +73,7 @@ export class ChatPageComponent implements OnInit {
       console.log(this.conversationsArray)
       if(apiResponse.msg =="Conv created: ok"){
         this.conversationsArray.conversations.push(apiResponse.data)
+        this.showUsernameFromId(this.conversationsArray.conversations[this.conversationsArray.conversations.length-1]._id, this.userId, this.conversationsArray.conversations.length-1)
 
       }
     } )
@@ -78,21 +87,25 @@ export class ChatPageComponent implements OnInit {
     this.conversationService.getConversations({id: id})
     .then( (apiResponse) => {
       this.conversationsArray = apiResponse
+      for (let i = 0; i < apiResponse.conversations.length ; i++) {
+        this.showUsernameFromId( apiResponse.conversations[i]._id, this.userId, i)
+      }
       console.log(this.conversationsArray)
     })
     .catch( apiResponse => console.log(apiResponse) )
   }
 
-  public showUsernameFromId(id, myId): void {
+  public showUsernameFromId(id, myId, index): void {
     // show users from conv
 
     this.userService.getUsernamefromId({id: id})
     .then( (apiResponse) => {
+      console.log(apiResponse)
       if(apiResponse.data.user1 == myId){
         console.log(this.usersArray.users.find((x => x._id === apiResponse.data.user2)).name)
-
+        this.conversationsArray.conversations[index].name = this.usersArray.users.find((x => x._id === apiResponse.data.user2)).name
       } else {
-        console.log('ton pote cest' + this.showUserFromId(apiResponse.data.user1))
+        this.conversationsArray.conversations[index].name = this.usersArray.users.find((x => x._id === apiResponse.data.user1)).name
       }
 
     })
