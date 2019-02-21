@@ -40,7 +40,7 @@ export class ChatPageComponent implements OnInit {
         console.log('User logged')
       } else{
         console.log('ca a pas marché')
-        this.router.navigate(['/login'])
+        this.router.navigate(['/'])
 
       }
     })

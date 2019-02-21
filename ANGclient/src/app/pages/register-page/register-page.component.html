@@ -1,23 +1,33 @@
 <!-- Data binding VUE => CTRL : (...) -->
+<div class="content">
+<div class="register_page">
+  <div class="register_page__title">Créez votre compte</div>
+  <form class="register_page__form" (submit)="formSubmit() " action="">
 
-<form (submit)="formSubmit() " action="">
+    <!-- Data binding VUE <=> CTRL : [(...)] -->
+      <label for="pseudo">pseudo</label>
+      <input
+      [(ngModel)]="formData.name"
+      type="text"
+      name ="name"
+      id="pseudo"
+      >
+      <label for="email">email</label>
+      <input
+      [(ngModel)]="formData.email"
+      type="text"
+      name ="email"
+      id="email"
+      >
+      <label for="mot_de_passe">mot de passe</label>
+      <input
+      [(ngModel)]="formData.password"
+      type="text"
+      name ="password"
+      id="mot_de_passe"
+      >
 
-  <!-- Data binding VUE <=> CTRL : [(...)] -->
-    <input
-    [(ngModel)]="formData.name"
-     type="text"
-     name ="name"
-    >
-    <input
-    [(ngModel)]="formData.email"
-     type="text"
-     name ="email"
-    >
-    <input
-    [(ngModel)]="formData.password"
-     type="text"
-     name ="password"
-    >
-
-    <button type="submit">Register</button>
+      <button type="submit">Register</button>
   </form>
+</div>
+</div>

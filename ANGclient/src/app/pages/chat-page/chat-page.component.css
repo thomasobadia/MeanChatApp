@@ -1,0 +1,61 @@
+.disconnect{
+
+    background-color: black;
+}
+
+.chat_page{
+    display: flex;
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    color: white;
+}
+
+.chat_page>*{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chat_page__list{
+    width: 40vw;
+
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+
+}
+
+.chat_page__list li{
+    display: block;
+    border-top: solid 1px;
+    font-size: 20px;
+    height: 50px;
+    margin: auto 0;
+    color: white;
+  vertical-align: middle;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.fontaine{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-image: url(../../../assets/fountain.jpg);
+    background-size: 10%;
+    z-index: -1;
+}

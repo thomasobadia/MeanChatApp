@@ -1,30 +1,38 @@
-<a [routerLink]="['/chat']" >Back</a>
+<div class="conversation_page">
+  <a class="conversation_page__back" [routerLink]="['/chat']" >&#60; Back</a>
+  <div class="conversation_page__dada"></div>
 
 
-  <div *ngIf="messagesArray">
+    <div class="conversation_page__conversation" *ngIf="messagesArray">
 
-    <div *ngFor="let message of messagesArray.messages">
-      <div style="text-align: left" *ngIf="message.from !== this.myId" >
-          <p>{{message.date }}</p>
-          <p>{{message.content }}</p>
+      <div *ngFor="let message of messagesArray.messages">
+        <div class="conversation_page__message" style="text-align: left" *ngIf="message.from !== this.myId" >
+            <span class="conversation_page__message__text left_message" >{{message.content }}</span>
+            <span class="conversation_page__message__date" >{{message.date }}</span>
+        </div>
+        <div  class="conversation_page__message" style="text-align: right" *ngIf="message.from == this.myId" >
+            <span class="conversation_page__message__date" >{{message.date }}</span>
+            <span class="conversation_page__message__text right_message" >{{message.content }}</span>
+        </div>
+
       </div>
-      <div style="text-align: right" *ngIf="message.from == this.myId" >
-          <p>{{message.date }}</p>
-          <p>{{message.content }}</p>
-      </div>
-
     </div>
-  </div>
 
 
-<form (submit)="createMessage() " action="">
+  <form class="conversation_page__form" (submit)="createMessage() " action="">
 
-  <!-- Data binding VUE <=> CTRL : [(...)] -->
-    <input
-    [(ngModel)]="messageFormData"
-     type="text"
-     name ="content"
-    >
+    <!-- Data binding VUE <=> CTRL : [(...)] -->
+      <input id="myInput"
+      [(ngModel)]="messageFormData"
+      type="text"
+      name ="content"
+      >
 
-    <button type="submit">Send</button>
+      <button 
+        onclick="document.getElementById('myInput').value = '';
+        var objDiv = document.querySelector('.conversation_page__conversation');
+        objDiv.scrollTop = objDiv.scrollHeight;
+        console.log('test')
+      "   type="submit">Send</button>
   </form>
+</div>

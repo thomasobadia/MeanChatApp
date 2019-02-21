@@ -1,0 +1,50 @@
+.register_page{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 20px 0;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 15px;
+
+}
+
+.register_page__title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.register_page__form label, .register_page__form button{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 2px; 
+}
+
+
+.register_page__form button{
+    width: 100px;
+    margin: 30px auto 0 auto;
+}
+
+.register_page__form input{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid white 1px;
+    color: white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; 
+
+  }
+
+.content{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../../assets/warhol1.jpg);
+}

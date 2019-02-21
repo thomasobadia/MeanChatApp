@@ -1,23 +1,34 @@
-
-<h1 [textContent]="myTitle"> </h1>
-
+<div class="content">
 
 
-<form (submit)="loginUser()" action="">
+<div class="home_page">
+  <img src="../../../assets/chat.png" class="home_page__image">
+  <div class="home_page__title">Super Chat</div>
+  <div class="home_page__subtitle">Bienvenue dans notre super chat veuillez vous connecter</div>
 
+<form (submit)="loginUser()" action="" class="home_page__form">
+<label for="email"> email</label>
   <input
   [(ngModel)]="loginData.email"
    type="text"
    name ="email"
+   id  ="email"
   >
+  
+  <label for="mot_de_passe"> mot de passe</label>
   <input
   [(ngModel)]="loginData.password"
    type="text"
    name ="password"
+   id="mot_de_passe"
   >
 
-  <button type="submit">Login</button>
+  <button type="submit">Se connecter</button>
 </form>
 
-<p>You can also  <a [routerLink]="'/register'">Register</a></p>
+<p class="home_page__text">Tu peux aussi te <a [routerLink]="'/register'">créer un compte</a></p>
+</div>
+</div>
+
+
 

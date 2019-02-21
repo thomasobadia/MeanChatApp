@@ -1,20 +1,28 @@
 
-<button (click)="disconnect()"> Disconnect</button>
 
-<h1>Liste des utilisateurs</h1>
-<ul *ngIf="usersArray">
-  <li *ngFor="let user of usersArray.users">
-    <button (click)="createConversation( user._id )">{{ user.name }}</button>
-  </li>
-</ul>
+<button (click)="disconnect()" class="disconnect"> &#60; Disconnect</button>
+<div class="fontaine"></div>
 
-<h1>Liste des Conversations</h1>
+<div class="chat_page">
+  <div class="chat_page__list">
+    <h1>Créer une conversation</h1>
+    <ul *ngIf="usersArray">
+      <li *ngFor="let user of usersArray.users">
+        <button (click)="createConversation( user._id )">{{ user.name }}</button>
+      </li>
+    </ul>
+</div>
+  <div class="chat_page__list">
+    <h1>Liste des conversations</h1>
 
-<ul *ngIf="conversationsArray">
-  <li *ngFor="let conversation of conversationsArray.conversations">
-    <a [routerLink]="['/conversation',  conversation._id]">{{ conversation.name }}</a>
-  </li>
-</ul>
-<ul *ngIf="conversationsArray == undefined">
-  <p>No conversations yet</p>
-</ul>
+    <ul *ngIf="conversationsArray">
+      <li *ngFor="let conversation of conversationsArray.conversations">
+        <a [routerLink]="['/conversation',  conversation._id]">{{ conversation.name }}</a>
+      </li>
+    </ul>
+    <ul *ngIf="conversationsArray == undefined">
+      <p>No conversations yet</p>
+    </ul>
+  </div>
+  
+</div>
